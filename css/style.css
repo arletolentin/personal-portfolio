@@ -1,0 +1,106 @@
+ul {
+    list-style: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+ --black: #090909;
+ --darkgreen: #D7E2D6;
+ --blue: #083EFC;
+ --bluegraylight: #747D9F;
+ --ocean: #557AFF;
+}
+a {
+    text-decoration: none;
+}
+button {
+    border: unset;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+  }
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  h1,
+  h2,
+  p,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+.head {
+    background-color: var(--darkgreen);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--bluegraylight);
+}
+.navigation__container {
+    width: 1158px;
+    height: auto;
+    margin: auto;
+    padding: 0 15px;
+}
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navigation__list {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.navigation__logo {
+    margin-right: 350px;
+}
+.navigation__anchor {
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+}
+.navigation__anchor::after {
+    content: '';
+    height: 4px;
+    width: 0;
+    background-color: var(--blue);
+    border-radius: 2px;
+    position: absolute;
+    left: 0px;
+    bottom: -30px;
+    transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigation__item {
+    position: relative;
+}
+.navigation__item:hover .navigation__anchor:hover {
+    width: 100%;
+}
+.navigation__span {
+    color: var(--darkblue);
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 30px;
+    letter-spacing: .50px;
+}
+.navigation__spans {
+    color: var(--black);
+    font-weight: 800;
+    font-size: 25px;
+}
+.navigation__anchor:hover {
+    color: var(--ocean);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigation__logo:hover .navigation__span {
+    color: var(--black)
+}
+.navigation__logo:hover .navigation__spans {
+    color: var(--blue)
+}
