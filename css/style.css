@@ -1,7 +1,7 @@
 ul {
     list-style: none;
 }
-* {
+*, ::after, ::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,6 +12,8 @@ ul {
  --blue: #083EFC;
  --bluegraylight: #747D9F;
  --ocean: #557AFF;
+ --white: #FEFFFF;
+ --pale: #EAECEC;
 }
 a {
     text-decoration: none;
@@ -35,12 +37,13 @@ img {
     padding: 0;
   }
 .head {
-    background-color: var(--darkgreen);
+    background-color: var(--pale);
     padding-top: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid var(--bluegraylight);
 }
-.navigation__container {
+.navigation__container,
+.main__container {
     width: 1158px;
     height: auto;
     margin: auto;
@@ -73,13 +76,13 @@ img {
     border-radius: 2px;
     position: absolute;
     left: 0px;
-    bottom: -30px;
+    bottom: -25px;
     transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation__item {
     position: relative;
 }
-.navigation__item:hover .navigation__anchor:hover {
+.navigation__item:hover .navigation__anchor::after {
     width: 100%;
 }
 .navigation__span {
@@ -103,4 +106,34 @@ img {
 }
 .navigation__logo:hover .navigation__spans {
     color: var(--blue)
+}
+.home {
+    background-color: var(--white);
+    padding-top: 100px;
+}
+.main__container {
+    position: relative;
+}
+.profile__picture {
+    position: absolute;
+    transform: translateX(700px);
+}
+.hi, .its {
+    font-size: 85px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+.earl {
+    font-size: 135px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.an {
+    font-size: 25px;
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+}
+.web, .developer, .dot {
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
 }
